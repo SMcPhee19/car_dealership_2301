@@ -22,6 +22,14 @@ class Car
     @loan_length
   end
 
+  def total_cost
+    total_cost = @loan_length * @monthly_payment
+  end
+
+  def color
+    require 'pry'; binding.pry
+  end
+
 
 
 
