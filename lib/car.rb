@@ -1,9 +1,10 @@
 class Car
-  attr_reader :make_model, :monthly_payment, :loan_length
+  attr_reader :make_model, :monthly_payment, :loan_length, :color
   def initialize(make_model, monthly_payment, loan_length)
     @make_model = make_model
     @monthly_payment = monthly_payment
     @loan_length = loan_length
+    @color = nil
   end
 
   def make
@@ -26,8 +27,9 @@ class Car
     total_cost = @loan_length * @monthly_payment
   end
 
-  def color
-    require 'pry'; binding.pry
+
+  def paint!(color)
+    @color = color
   end
 
 

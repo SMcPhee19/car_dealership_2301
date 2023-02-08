@@ -44,5 +44,12 @@ RSpec.describe Car do
     expect(car.color).to be nil
   end
 
+  it 'has paint' do
+    car = Car.new("Ford Mustang", 1500, 36)
+    car.paint!(:blue)
+
+    expect(car.color).to eq(:blue)
+  end
+
   
 end
